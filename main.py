@@ -10,7 +10,7 @@ from data.mconfig import myCode
 
 app = Flask(__name__)
 
-app.config['JWT_SECRET_KEY'] = myCode
+app.config['JWT_SECRET_KEY'] = MYCODE
 
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)

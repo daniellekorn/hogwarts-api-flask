@@ -1,17 +1,17 @@
 from pymongo import MongoClient
 from bson.objectid import ObjectId
-from api.models.student import Student
-from api.data.mconfig import mpass
+from models.student import Student
+from data.mconfig import MPASS
 from datetime import datetime
 from flask_caching import Cache
-from api.models.user import User
+from models.user import User
 
 
 class DataLayer:
 
     def __init__(self, app):
         self.__cluster = MongoClient\
-            (f"mongodb+srv://dtonkorn:{mpass}@cluster0-o7bkz.mongodb.net/test?retryWrites=true&w=majority")
+            (f"mongodb+srv://dtonkorn:{MPASS}@cluster0-o7bkz.mongodb.net/test?retryWrites=true&w=majority")
         self.__db = self.__cluster["hogwarts"]
         self.__collection = self.__db["students"]
         self.__user_collection = self.__db["users"]
