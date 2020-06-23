@@ -1,12 +1,12 @@
 from flask import Flask, json, request
-from api.data.dataLayer import DataLayer
-from api.data.skills import Skills
+from data.dataLayer import DataLayer
+from data.skills import Skills
 from flask_bcrypt import Bcrypt
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from flask_jwt_extended import create_access_token
-from api.models.user import User
-from api.data.mconfig import myCode
+from models.user import User
+from data.mconfig import myCode
 
 app = Flask(__name__)
 
