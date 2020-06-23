@@ -12,7 +12,7 @@ venv
 .env.production.local
 __pycache__
 __init__.py
-/api/data/mconfig.py
+data/mconfig.py
 .DS_Store
 
 npm-debug.log*
